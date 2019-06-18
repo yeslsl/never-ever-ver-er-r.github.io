@@ -147,8 +147,8 @@ paginate_path: 'page:num'
 ```
 ---
 layout: post
-title: 'H2O theme for Jekyll'
-subtitle: '或许是最漂亮的Jekyll主题'
+title: 'Make Excellence a Habit'
+subtitle: '让优秀成为一种习惯'
 date: 2017-04-18
 categories: 技术
 cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-postcover.jpg'
