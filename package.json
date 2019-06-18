@@ -13,7 +13,19 @@
     "gulp-clean-css": "^3.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.1.2"
+    "gulp-uglify": "^2.1.2",
+    "braces": "^3.0.2",
+    "clean-css": ">=4.1.11",
+    "fstream": ">=1.0.12",
+    "tar": ">=2.2.2",
+    "extend": ">=3.0.2",
+    "minimatch": ">=3.0.2",
+    "randomatic": ">=3.0.0",
+    "cryptiles": ">=4.1.2",
+    "sshpk": ">=1.13.2",
+    "lodash": ">=4.17.11",
+    "tough-cookie": ">=2.3.3",
+    "hoek": ">=4.2.1"
   },
   "dependencies": {}
 }
