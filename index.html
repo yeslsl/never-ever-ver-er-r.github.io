@@ -68,9 +68,16 @@ description: 让优秀成为一种习惯
                 <ul id="sns-links" class="sns-links">
                     {% for s in site.sns %}
                     <li>
-                        <a href="{{ s[1] }}" target="_blank">
-                            <i class="iconfont icon-{{ s[0] }}"></i>
-                        </a>
+                        {% if s[0] == "email" %}
+                            <a href="{{ s[1] }}" target="_self">
+                                <i class="iconfont icon-{{ s[0] }}"></i>
+                            </a>
+                        {% else %}
+                            <a href="{{ s[1] }}" target="_blank">
+                                <i class="iconfont icon-{{ s[0] }}"></i>
+                            </a>
+                        {% endif %}
+
                     </li>
                     {% endfor %}
                 </ul>
