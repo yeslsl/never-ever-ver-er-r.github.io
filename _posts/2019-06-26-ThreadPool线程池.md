@@ -17,8 +17,6 @@ tags: 线程池 ThreadPool Executors
       
       　　1. 允许的请求队列长度为Integer.MAX_VALUE，可能会堆积大量的请求，从而导致OOM。
       
-      　　
-      
   2. **SingleThreadPool**
   
       　　只会有一个线程处于活动状态执行任务，剩余的任务进入一个共享的无界队列LinkedBlockingQueue等待；
@@ -35,7 +33,6 @@ tags: 线程池 ThreadPool Executors
       　　**_缺点：_**
       
       　　1. 允许的创建线程数量为Integer.MAX_VALUE，可能会创建大量的线程，从而导致OOM。
-
 
 ## ThreadPoolExecutor
 
