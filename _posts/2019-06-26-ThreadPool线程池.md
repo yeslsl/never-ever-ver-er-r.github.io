@@ -9,7 +9,7 @@ tags: 线程池 ThreadPool Executors
 ---
 
 ## Executors
-  1. ###FixedThreadPool
+  1. **FixedThreadPool**
       
       　　最多有 n 个线程会处于活动状态执行任务，第ｎ个以后的任务进入一个共享的无界队列LinkedBlockingQueue等待；
       
@@ -19,7 +19,7 @@ tags: 线程池 ThreadPool Executors
       
       　　
       
-  2. ###SingleThreadPool
+  2. **SingleThreadPool**
   
       　　只会有一个线程处于活动状态执行任务，剩余的任务进入一个共享的无界队列LinkedBlockingQueue等待；
       
@@ -28,7 +28,7 @@ tags: 线程池 ThreadPool Executors
       　　1. 允许的请求队列长度为Integer.MAX_VALUE，可能会堆积大量的请求，从而导致OOM。
       
       　　2. 如果线程遇到错误中止，它是无法使用替代线程的，相比较于FixedThreadPool(1)
-  3. ###CachedThreadPool
+  3. **CachedThreadPool**
   
       　　每个任务到达后， 会首先重用之前任务使用的线程池中仍未销毁的线程。如果线程池中没有可用线程，该线程池则会生成一个新的线程用于执行任务。在任务执行完成后，该线程默认会存在60s，在此期间如无其他任务使用该线程，该线程终止并被移出缓存。
       
