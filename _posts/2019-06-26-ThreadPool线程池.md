@@ -46,29 +46,30 @@ tags: 线程池 ThreadPool Executors
 　　以最长的第四个构造方法分析。
 
 ```java
- public ThreadPoolExecutor(int corePoolSize, // 1
-                            int maximumPoolSize,  // 2
-                            long keepAliveTime,  // 3
-                            TimeUnit unit,  // 4
-                            BlockingQueue<Runnable> workQueue, // 5
-                            ThreadFactory threadFactory,  // 6
-                            RejectedExecutionHandler handler ) { //7
-      if (corePoolSize < 0 ||
-          maximumPoolSize <= 0 ||
-          maximumPoolSize < corePoolSize ||
-          keepAliveTime < 0)
-          throw new IllegalArgumentException();
-      if (workQueue == null || threadFactory == null || handler == null)
-          throw new NullPointerException();
-      this.corePoolSize = corePoolSize;
-      this.maximumPoolSize = maximumPoolSize;
-      this.workQueue = workQueue;
-      this.keepAliveTime = unit.toNanos(keepAliveTime);
-      this.threadFactory = threadFactory;
-      this.handler = handler;
-  }　
-```　
+public ThreadPoolExecutor(int corePoolSize, // 1
+                           int maximumPoolSize,  // 2
+                           long keepAliveTime,  // 3
+                           TimeUnit unit,  // 4
+                           BlockingQueue<Runnable> workQueue, // 5
+                           ThreadFactory threadFactory,  // 6
+                           RejectedExecutionHandler handler ) { //7
+     if (corePoolSize < 0 ||
+         maximumPoolSize <= 0 ||
+         maximumPoolSize < corePoolSize ||
+         keepAliveTime < 0)
+         throw new IllegalArgumentException();
+     if (workQueue == null || threadFactory == null || handler == null)
+         throw new NullPointerException();
+     this.corePoolSize = corePoolSize;
+     this.maximumPoolSize = maximumPoolSize;
+     this.workQueue = workQueue;
+     this.keepAliveTime = unit.toNanos(keepAliveTime);
+     this.threadFactory = threadFactory;
+     this.handler = handler;
+ }
+```
 
+图中数字对应含义如下：
 
 | 序号 | 名称 | 类型 | 含义 |
 | :---: | :---: | :---: | :---: |
