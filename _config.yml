@@ -58,6 +58,7 @@ postPatterns: 'circuitBoard'
 sns:
 #  weibo: '//weibo.com/lovecolcol'
   github: '//github.com/liangsir1992'
+  gitee: 'https://gitee.com/mysealer'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
