@@ -59,7 +59,7 @@ tags: java Optional null NullPointerException
       if (user == null) {
           return "Unknown";
       }
-      return u.getName();
+      return user.getName();
   }
   ```
   

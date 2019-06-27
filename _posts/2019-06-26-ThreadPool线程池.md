@@ -13,6 +13,21 @@ tags: 线程池 ThreadPool Executors
       
       　　最多有 n 个线程会处于活动状态执行任务，第ｎ个以后的任务进入一个共享的无界队列LinkedBlockingQueue等待；
       
+      ```java
+      public static ExecutorService newFixedThreadPool(int nThreads) {
+          return new ThreadPoolExecutor(nThreads, nThreads,
+                            0L, TimeUnit.MILLISECONDS,
+                            new LinkedBlockingQueue<Runnable>());
+      }
+      
+      public static ExecutorService newFixedThreadPool(int nThreads, ThreadFactory threadFactory) {
+          return new ThreadPoolExecutor(nThreads, nThreads,
+                                        0L, TimeUnit.MILLISECONDS,
+                                        new LinkedBlockingQueue<Runnable>(),
+                                        threadFactory);
+      }
+      ```
+      
       　　**_缺点：_**
       
       　　1. 允许的请求队列长度为Integer.MAX_VALUE，可能会堆积大量的请求，从而导致OOM。
@@ -21,6 +36,22 @@ tags: 线程池 ThreadPool Executors
   
       　　只会有一个线程处于活动状态执行任务，剩余的任务进入一个共享的无界队列LinkedBlockingQueue等待；
       
+      ```java
+      public static ExecutorService newSingleThreadExecutor() {
+          return new FinalizableDelegatedExecutorService
+              (new ThreadPoolExecutor(1, 1,
+                                      0L, TimeUnit.MILLISECONDS,
+                                      new LinkedBlockingQueue<Runnable>()));
+      }
+      
+      public static ExecutorService newSingleThreadExecutor(ThreadFactory threadFactory) {
+          return new FinalizableDelegatedExecutorService
+              (new ThreadPoolExecutor(1, 1,
+                                      0L, TimeUnit.MILLISECONDS,
+                                      new LinkedBlockingQueue<Runnable>(),
+                                      threadFactory));
+      }
+      ```
       　　**_缺点：_**
       
       　　1. 允许的请求队列长度为Integer.MAX_VALUE，可能会堆积大量的请求，从而导致OOM。
@@ -30,13 +61,28 @@ tags: 线程池 ThreadPool Executors
   
       　　每个任务到达后， 会首先重用之前任务使用的线程池中仍未销毁的线程。如果线程池中没有可用线程，该线程池则会生成一个新的线程用于执行任务。在任务执行完成后，该线程默认会存在60s，在此期间如无其他任务使用该线程，该线程终止并被移出缓存。
       
+      ```java
+      public static ExecutorService newCachedThreadPool() {
+          return new ThreadPoolExecutor(0, Integer.MAX_VALUE,
+                                        60L, TimeUnit.SECONDS,
+                                        new SynchronousQueue<Runnable>());
+      }
+      
+      public static ExecutorService newCachedThreadPool(ThreadFactory threadFactory) {
+          return new ThreadPoolExecutor(0, Integer.MAX_VALUE,
+                                        60L, TimeUnit.SECONDS,
+                                        new SynchronousQueue<Runnable>(),
+                                        threadFactory);
+      }
+      ```
+      
       　　**_缺点：_**
       
       　　1. 允许的创建线程数量为Integer.MAX_VALUE，可能会创建大量的线程，从而导致OOM。
 
 ## ThreadPoolExecutor
 
-　　ThreadPoolExecutor是上述三种线程池的底层实现，其提供了四种构造方法：
+　　ThreadPoolExecutor是上述三种线程池的底层实现(特殊的是SingleThreadExecutor多包装了一层FinalizableDelegatedExecutorService)，其提供了四种构造方法：
 
 ![avatar][ThreadPoolConstructor]
 
@@ -79,7 +125,7 @@ public ThreadPoolExecutor(int corePoolSize, // 1
 | 7 | handler | RejectedExecutionHandler | 拒绝策略 |
   
 
-**_TODO 未完待续。。。(ThreadPoolExecutor实现上述几种ThreadPool的源码分析及自定义ThreadPoolExecutor)_**
+**_TODO 未完待续。。。(自定义ThreadPoolExecutor，利用有界队列实现任务拒绝、自定义拒绝策略及自定义ThreadFactory)。_**
 
 
 
