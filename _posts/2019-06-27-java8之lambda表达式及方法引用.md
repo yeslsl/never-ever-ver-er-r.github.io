@@ -144,7 +144,7 @@ x -> 2 * x
 这就是说不能在 lambda 内部修改定义在域外的变量，否则会编译错误。
 * lambda 表达式的局部变量可以不用声明为 final，
 但是必须不可被后面的代码修改（即隐性的具有 final 的语义）
-* 在 Lambda 表达式当中不允许声明一个与外层局部变量或成员变量同名的lambda参数或者lambda域内局部变量。 
+* 在 Lambda 表达式当中不允许声明一个与外层局部变量同名的lambda参数或者lambda域内局部变量。 
 
 ## java8的方法引用 Method Reference
 　　java8的方法引用共分以下四种情况：
