@@ -29,14 +29,8 @@ tags: java java8 lambda 方法引用 method reference
 不满足自己的场景， 可以自己定义相应的函数式接口。
 
 　　java8之前就存在的函数式接口：
-<style>
-.firstTable table th:first-of-type {
-	width: 400px;
-}
-</style>
-<div class="firstTable">
 
-| 接口名 |
+| 　　　　　　　　　　　　　　　　　接口名　　　　　　　　　　　　　　　　　　 |
 | :---: |
 |java.lang.Runnable|
 |java.util.concurrent.Callable|
@@ -49,7 +43,6 @@ tags: java java8 lambda 方法引用 method reference
 |java.awt.event.ActionListener|
 |javax.swing.event.ChangeListener|
 
-</div>
 　　java8新增的函数式接口：
 
 |序号|接口名|接口描述|
