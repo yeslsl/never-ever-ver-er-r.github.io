@@ -30,7 +30,7 @@ tags: java java8 lambda 方法引用 method reference
 
 　　java8之前就存在的函数式接口：
 <style>
-firstTable table th:first-of-type {
+.firstTable table th:first-of-type {
 	width: 400px;
 }
 </style>
