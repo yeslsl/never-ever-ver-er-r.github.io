@@ -31,7 +31,7 @@ tags: java java8 lambda 方法引用 method reference
 　　java8之前就存在的函数式接口：
 
 | 接口名 |
-| :---: |
+| :---------------------------------------------------------------------------------: |
 |java.lang.Runnable|
 |java.util.concurrent.Callable|
 |java.security.PrivilegedAction|
@@ -48,8 +48,8 @@ tags: java java8 lambda 方法引用 method reference
 |序号|接口名|接口描述|
 |:---:|:---:|:---:|
 |1|BiConsumer&lt;T,U>|代表了一个接受两个输入参数的操作，并且不返回任何结果|
-|2|BiFunction&lt;T,U,R>|代表了一个接受两个输入参数的方法，并且返回一个结果|
-|3|BinaryOperator&lt;T>|代表了一个作用于于两个同类型操作符的操作，并且返回了操作符同类型的结果|
+|2|BiFunction&lt;T,U,R>|代表了一个接受两个输入参数的操作，并且返回一个结果|
+|3|BinaryOperator&lt;T>|代表了一个作用于于两个同类型操作数的操作，并且返回了同类型结果，BiFunction的子接口|
 |4|	BiPredicate&lt;T,U>|代表了一个两个参数的boolean值方法|
 |5|	BooleanSupplier|代表了boolean值结果的提供方|
 |6|	Consumer&lt;T>|代表了接受一个输入参数并且无返回的操作|
@@ -57,7 +57,7 @@ tags: java java8 lambda 方法引用 method reference
 |8|	DoubleConsumer|代表一个接受double值参数的操作，并且不返回结果。|
 |9|	DoubleFunction&lt;R>|代表接受一个double值参数的方法，并且返回结果|
 |10|	DoublePredicate|代表一个拥有double值参数的boolean值方法|
-|11|	DoubleSupplier|代表一个double值结构的提供方|
+|11|	DoubleSupplier|代表一个double值结果的提供方|
 |12|	DoubleToIntFunction|接受一个double类型输入，返回一个int类型结果。|
 |13|	DoubleToLongFunction|接受一个double类型输入，返回一个long类型结果|
 |14|	DoubleUnaryOperator|接受一个参数同为类型double,返回值类型也为double 。|
