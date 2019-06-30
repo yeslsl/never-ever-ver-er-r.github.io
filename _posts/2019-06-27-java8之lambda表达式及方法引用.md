@@ -30,7 +30,7 @@ tags: java java8 lambda 方法引用 method reference
 
 　　java8之前就存在的函数式接口：
 
-| 　　　　　　　　   　　　　　　　　　接口名　　　　　　　　　　　　　　　　　　 |
+| 　　　  　　　　　　　　　接口名 　　　  　　　　　　　　　　　　|
 | :---: |
 |java.lang.Runnable|
 |java.util.concurrent.Callable|
@@ -45,7 +45,7 @@ tags: java java8 lambda 方法引用 method reference
 
 　　java8新增的函数式接口：
 
-|序号|接口名|接口描述|
+|  序号  |接口名|接口描述|
 |:---:|:---:|:---:|
 |1|BiConsumer&lt;T,U>|代表了一个接受两个输入参数的操作，并且不返回任何结果|
 |2|BiFunction&lt;T,U,R>|代表了一个接受两个输入参数的操作，并且返回一个结果|
