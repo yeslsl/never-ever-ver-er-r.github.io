@@ -29,9 +29,13 @@ tags: java java8 lambda 方法引用 method reference
 不满足自己的场景， 可以自己定义相应的函数式接口。
 
 　　java8之前就存在的函数式接口：
-
+<style>
+table th:first-of-type {
+	width: 400px;
+}
+</style>
 | 接口名 |
-| :---------------------------------------------------------------------------------: |
+| :---: |
 |java.lang.Runnable|
 |java.util.concurrent.Callable|
 |java.security.PrivilegedAction|
