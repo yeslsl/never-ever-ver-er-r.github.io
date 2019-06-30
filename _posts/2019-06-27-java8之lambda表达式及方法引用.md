@@ -47,7 +47,7 @@ tags: java java8 lambda 方法引用 method reference
 
 |序号|接口名|接口描述|
 |:---:|:---:|:---:|
-|　1　　|BiConsumer&lt;T,U>|代表了一个接受两个输入参数的操作，并且不返回任何结果|
+|1|BiConsumer&lt;T,U>|代表了一个接受两个输入参数的操作，并且不返回任何结果|
 |2|BiFunction&lt;T,U,R>|代表了一个接受两个输入参数的操作，并且返回一个结果|
 |3|BinaryOperator&lt;T>|代表了一个作用于于两个同类型操作数的操作，并且返回了同类型结果，BiFunction的子接口|
 |4|	BiPredicate&lt;T,U>|代表了一个两个参数的boolean值方法|
