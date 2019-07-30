@@ -8,13 +8,16 @@ tags: java8 stream 流操作 流
 
 ---
 
-[参考链接:IBM 之Java 8 中的 Streams API 详解](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/ "Java 8 中的 Streams API 详解")
+参考链接:[IBM 之Java 8 中的 Streams API 详解](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/ "https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/")
 
 ## Stream简介
-　　Java 8 中的 Stream 是对集合（Collection）对象功能的增强，它专注于对集合对象进行各种非常便利、
+　　Java 8 中的 Stream 是对**_集合（Collection）_**对象功能的增强，它专注于对集合对象进行各种非常便利、
 高效的聚合操作（aggregate operation），或者大批量数据操作 (bulk data operation)。Stream API 借
 助于同样新出现的 Lambda 表达式，极大的提高编程效率和程序可读性。同时它提供串行和并行两种模式进行
 汇聚操作，并发模式能够充分利用多核处理器的优势，使用 fork/join 并行方式来拆分任务和加速处理过程。
+
+## Stream的构造方式
+1. 通过
 
 ## Stream解决的问题
 
