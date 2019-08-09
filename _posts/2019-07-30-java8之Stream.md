@@ -147,3 +147,7 @@ Stream&lt;Long&gt;&gt;、Stream&lt;Double&gt;，但是 boxing 和 unboxing 会�
 |findFirst|Short-circuiting(短路操作)|aaa|
 |findAny|Short-circuiting(短路操作)|aaa|
 |limit|Short-circuiting(短路操作)|aaa|
+
+
+## Spliterator
+TODO 待续。。。
