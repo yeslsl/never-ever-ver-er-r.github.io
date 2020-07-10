@@ -10,6 +10,7 @@ tags: java Comparator Comparable
 
 ## 比较
 
+
 |比较项|Comparator|Comparable|
 |:---:|:---:|:---:|
 |接口 or 类|接口|接口|
